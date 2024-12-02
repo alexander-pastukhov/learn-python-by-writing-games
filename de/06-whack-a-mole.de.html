@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
-<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/06-whack-a-mole.html">
-<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/06-whack-a-mole.de.html">
+<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/06-whack-a-mole.html" />
+<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/06-whack-a-mole.de.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
         </div>
     <div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle language-selector" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/06-whack-a-mole.html" id="language-link-en">English</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/06-whack-a-mole.html" id="language-link-en">English</a></li></ul>
 </div>
 <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
@@ -205,7 +205,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Anhang</span></span>
+  </li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
@@ -277,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Mach Übung #4.</p>
 </div>
 <p>Slicing kann um eine <code>step</code>-Angabe erweitert werden, indem du <code>start:stop:step</code>-Notation verwendest. <code>step</code> kann negativ sein, wodurch du Indizes in umgekehrter Reihenfolge erstellen kannst:</p>
-<div id="e4e62a21" class="cell" data-execution_count="1">
+<div id="76ebf937" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen[<span class="dv">4</span>:<span class="dv">0</span>:<span class="op">-</span><span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
@@ -285,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Aber pass auf, in welche Richtung der Schritt geht. Wenn er in die falsche Richtung geht, dann kannst du <code>stop</code> nicht erreichen und Python wird eine leere Liste zurückgeben.</p>
-<div id="8a4a75c0" class="cell" data-execution_count="2">
+<div id="e1f3f89b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen[<span class="dv">4</span>:<span class="dv">0</span>:<span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -293,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Schritte können mit ausgelassenen und negativen Indizes kombiniert werden. Um jedes <em>ungerade</em> Element der Liste zu erhalten, schreibst du <code>meine_nette_zahlen[::2]</code>:</p>
-<div id="c6c8a447" class="cell" data-execution_count="3">
+<div id="922cbfce" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen[::<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -308,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Mach Übung #6.</p>
 </div>
 <p>In Python sind Listen dynamisch, also kannst du immer Elemente hinzufügen oder entfernen. Schau dir <a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">die Liste der Methoden</a> an. Du kannst ein neues Element am Ende der Liste hinzufügen, indem du die <code>.append(&lt;neuer_wert&gt;)</code> Methode verwendest.</p>
-<div id="099dd47c" class="cell" data-execution_count="4">
+<div id="4c013e21" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>meine_schönen_zahlen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>meine_schönen_zahlen.append(<span class="dv">10</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>meine_schönen_zahlen</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -317,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Oder, du kannst <code>insert(&lt;index&gt;, &lt;new_value&gt;)</code> <em>vor</em> einem Element mit diesem Index einfügen. Leider bedeutet das, dass du einen beliebig großen Index verwenden kannst und es wird einen neuen Wert als <em>letztes</em> Element einfügen, ohne einen Fehler zu generieren.</p>
-<div id="868be518" class="cell" data-execution_count="5">
+<div id="926ac120" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen.insert(<span class="dv">2</span>, <span class="dv">10</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen.insert(<span class="dv">500</span>, <span class="dv">20</span>)</span>
@@ -327,7 +330,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Du kannst ein Element mithilfe von <code>pop(&lt;index&gt;)</code> entfernen, beachte, dass das Element <em>zurückgegeben</em> wird. Wenn du den Index weglässt, entfernt <code>pop()</code> das <em>letzte</em> Element der Liste. Hier kannst du nur gültige Indizes verwenden.</p>
-<div id="0efc0c96" class="cell" data-execution_count="6">
+<div id="84c637c0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen.pop(<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>meine_nette_zahlen.pop(<span class="dv">3</span>)</span>
@@ -361,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section id="for-loop-de" class="level2" data-number="6.5"><h2 data-number="6.5" class="anchored" data-anchor-id="for-loop-de">
 <span class="header-section-number">6.5</span> For-Schleife</h2>
 <p>In dem obigen Code mussten wir über drei Kreise (Kreise) iterieren, die wir in einer Liste hatten. Python hat genau das richtige Werkzeug dafür: eine <a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#for-statements">For-Schleife</a>, die über die Elemente in jeder Sequenz iteriert (unsere Liste ist eine Sequenz!). Hier ist ein Beispiel:</p>
-<div id="1592f9d4" class="cell" data-execution_count="7">
+<div id="b7900080" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>zahlen <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">42</span>]</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> eine_zahl <span class="kw">in</span> zahlen:</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Wert der Variable 'eine_zahl' in dieser Iteration ist </span><span class="sc">%d</span><span class="st">"</span><span class="op">%</span>(eine_zahl))</span>
@@ -394,7 +397,7 @@ Wert der Variable 'eine_zahl' in dieser Iteration ist 42
 </section><section id="range" class="level2" data-number="6.7"><h2 data-number="6.7" class="anchored" data-anchor-id="range">
 <span class="header-section-number">6.7</span> range() Funktion: Code N-mal wiederholen</h2>
 <p>Manchmal musst du den Code mehrere Male wiederholen. Stell dir zum Beispiel vor, du hast 40 Versuche in einem Experiment. Dann musst du den versuchsbezogenen Code 40 Mal wiederholen. Natürlich könntest du eine Liste mit 40 Elementen von Hand erstellen und darüber iterieren, aber Python hat eine praktische <a href="https://docs.python.org/3/tutorial/controlflow.html?highlight=loop#the-range-function">range()</a>-Funktion dafür. <code>range(N)</code> liefert N ganze Zahlen von 0 bis N-1 (gleiche Regel wie beim Slicing, auch ohne das letzte Element) die du in einer for-Schleife durchlaufen kannst.</p>
-<div id="4db8993d" class="cell" data-execution_count="8">
+<div id="3cd1b3bb" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Wert von x ist </span><span class="sc">%d</span><span class="st">"</span><span class="op">%</span>(x))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -404,7 +407,7 @@ Wert von x ist 2</code></pre>
 </div>
 </div>
 <p>Du kannst das Verhalten der <a href="https://docs.python.org/3/library/stdtypes.html#range">range()</a>-Funktion modifizieren, indem du einen Startwert und eine Schrittgröße angibst. In seiner einfachsten Form <code>range(N)</code> ist jedoch ein nützliches Werkzeug, um den Code so oft zu wiederholen. Beachte, dass du in einer <code>for</code>-Schleife immer eine temporäre Variable benötigst, aber manchmal diese Variable gar nicht verwendest. In solchen Fällen solltest du <code>_</code> (Unterstrich-Symbol) als Variablennamen verwenden, um die Nichtverwendung anzuzeigen.</p>
-<div id="e77ce3c1" class="cell" data-execution_count="9">
+<div id="e5ea2266" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Ich werde zweimal wiederholt!"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -435,7 +438,7 @@ Ich werde zweimal wiederholt!</code></pre>
 <p>Aber Python hat einen coolen Trick namens <a href="https://docs.python.org/3/tutorial/controlflow.html#tut-unpacking-arguments">Entpacken von Argumentlisten</a>: Du kannst eine Liste von Argumenten voranstellen und Python entpackt die Liste in Argumente in der gleichen Reihenfolge, wie sie in der Liste sind: Der erste Wert geht an den Parameter, der zweite Wert an den zweiten Parameter usw. Also in unserem Fall kann der Code vereinfacht werden zu:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>random.uniform(<span class="op">*</span>TIME_UNTIL_BEEP)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Achte drauf, dass die Anzahl und Reihenfolge der Elemente in der Liste zu den Funktionsparametern passen! Das liegt in deiner Verantwortung!</p>
-<div id="a45b685a" class="cell" data-execution_count="10">
+<div id="c4e523ee" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> single_parameter_function(x):</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">"""Do nothing but require a single paramter</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">  """</span></span>
