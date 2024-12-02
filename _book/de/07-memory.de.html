@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
-<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/07-memory.html">
-<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/07-memory.de.html">
+<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/07-memory.html" />
+<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/07-memory.de.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -142,7 +142,7 @@ window.Quarto = {
         </div>
         </div>
     <div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle language-selector" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/07-memory.html" id="language-link-en">English</a></li></ul>
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/07-memory.html" id="language-link-en">English</a></li></ul>
 </div>
 <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
@@ -230,7 +230,10 @@ window.Quarto = {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Anhang</span></span>
+  </li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
@@ -337,11 +340,11 @@ window.Quarto = {
 </section><section id="tuple" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="tuple">
 <span class="header-section-number">7.4</span> Tuple: eine gefrorene Liste</h2>
 <p>Die weisen Leute, die Python geschaffen haben, waren sich des Problems bewusst, das die <em>Variable-als-Aufkleber</em>-Problematik verursacht. Daher haben sie eine <strong>unveränderliche</strong> Version einer Liste hinzugefügt, die als <a href="https://docs.python.org/3/library/stdtypes.html?highlight=tuple#tuple">Tuple</a> bezeichnet wird. Es handelt sich um eine “gefrorene” Liste von Werten, die du durchlaufen, auf deren Elemente per Index zugreifen oder herausfinden kannst, wie viele Elemente sie hat, aber du <em>kannst sie nicht ändern</em>. Kein Hinzufügen, Entfernen, Ersetzen von Werten usw. Für dich bedeutet das, dass eine Variable mit einer gefrorenen Liste eine Schachtel und nicht ein Aufkleber ist und dass sie sich wie jedes andere “normale” <strong>unveränderliche</strong> Objekt verhält. Du kannst ein <code>tuple</code> durch die Verwendung von runden Klammern erstellen.</p>
-<div id="53fc3960" class="cell" data-execution_count="1">
+<div id="1c602156" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ich_bin_ein_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Du kannst es durchlaufen, z.B.,</p>
-<div id="0bafa21f" class="cell" data-execution_count="2">
+<div id="58567859" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ich_bin_ein_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> ich_bin_ein_tuple:</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(zahl)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -352,7 +355,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Aber wie ich schon sagte, das Anhängen wird einen Fehler werfen</p>
-<div id="2bfa417e" class="cell" data-execution_count="3">
+<div id="290fae09" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>i_am_a_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># wirft einen AttributeError: 'tuple' Objekt hat keine 'append' Eigenschaft</span></span>
@@ -371,7 +374,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[3], line 4</span>
 </div>
 </div>
 <p>Gleiches gilt für das Versuchen, es zu ändern</p>
-<div id="643122a1" class="cell" data-execution_count="4">
+<div id="80812e28" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>i_am_a_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># wirft einen TypeError: 'tuple' Objekt unterstützt keine Elementzuweisung</span></span>
@@ -408,7 +411,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[4], line 4</span>
 </div>
 <p>Hier hat <code>y = list(x)</code> eine neue Liste erstellt (die ein exaktes Abbild der mit dem “x”-Etikett versehenen war) und das “y”-Etikett wurde auf dieser neuen Liste angebracht, während das “x” weiterhin an der ursprünglichen hing.</p>
 <p>Wenn dir schwindelig wird, tut es mir leid, aber es wird noch schlimmer. Der folgende Absatz behandelt ein relativ fortgeschrittenes Szenario, aber ich möchte, dass du darüber Bescheid weißt, denn die Dinge verhalten sich extrem entgegen der Intuition und ich bin selbst ein paar Mal darauf hereingefallen und es hat jedes Mal ewig gedauert, das Problem zu lösen. Also, was passiert, wenn du ein Tupel (unveränderlich!) hast, das eine Liste (veränderbar) enthält? Wie ich bereits erwähnt habe, kannst du das Element selbst nicht ändern, aber dieses Element ist lediglich ein Verweis auf die Liste (ein Aufkleber auf einem <em>veränderbaren</em> Objekt!), also kannst du trotzdem mit der Liste selbst herumspielen, obwohl das Tupel unveränderlich ist. Außerdem macht das Erstellen einer Kopie eines Tupels lediglich eine Kopie des Verweises, der immer noch auf dieselbe Liste zeigt! Also könntest du denken, dass alles in Ordnung ist, weil es sich ja um Tupel handelt, und dann von genau diesem Umstand überrascht werden. Hier ist ein Beispiel für ein solches Durcheinander:</p>
-<div id="d57d79a3" class="cell" data-execution_count="5">
+<div id="ccf12960" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tuple_1 <span class="op">=</span> <span class="bu">tuple</span>([<span class="dv">1</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>], <span class="dv">2</span>])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>tuple_2 <span class="op">=</span> tuple_1</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -474,7 +477,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[5], line 5</span>
 </div>
 <p>Nenn die Funktion <code>position_from_index</code>. Sie sollte einen Argument (<code>index</code>) entgegennehmen und eine Liste mit <code>[&lt;x&gt;, &lt;y&gt;]</code> Koordinaten in den PsychoPy-Einheiten (ab jetzt nehme ich an, dass diese <a href="#psychopy-units-norm">norm</a> sind) zurückgeben. Du kannst dann diesen Wert für das Argument <a href="https://psychopy.org/api/visual/imagestim.html#psychopy.visual.ImageStim.pos">pos</a> der <a href="https://psychopy.org/api/visual/imagestim.html#imagestim">ImageStim()</a> verwenden.</p>
 <p>Die Berechnung könnte kompliziert aussehen, also lass mich dir helfen loszulegen. Wie kannst du die <em>x</em>-Koordinate für die <em>oberste</em> Reihe berechnen? Wenn du dich nur auf die oberste Reihe konzentrierst, wird es einfacher, weil hier der <em>Spaltenindex</em> gleich dem Gesamtindex ist: Die linke Spalte ist 0, die nächste ist 1 usw. Du brauchst eine einfache Algebra von <span class="math inline">\(x = a_x + b_x \cdot Spalte\)</span>. Du kannst beide <span class="math inline">\(a_x\)</span> und <span class="math inline">\(b_x\)</span> leicht ableiten, wenn du die Positionen der ersten und zweiten Karten von Hand berechnest. Das Gleiche gilt für die <em>y</em>-Koordinate. Angenommen, du weißt die <em>Reihe</em>, die entweder 0 (oberste Reihe) oder 1 (unterste Reihe) ist, kannst du <span class="math inline">\(y = a_y + b_y \cdot Reihe\)</span> berechnen (beachte, dass die Reihen von oben nach unten gehen, aber die PsychoPy-Koordinaten von unten nach oben gehen).</p>
-<p>Aber, höre ich dich sagen, du hast keine Zeilen- und Spaltenindizes, sondern nur den Gesamtindex? Um diese zu berechnen, musst du nur im Kopf behalten, dass jede Zeile <em>vier</em> Karten hat. Dann kannst du zwei spezielle Divisionsoperatoren verwenden: den <a href="https://python-reference.readthedocs.io/en/latest/docs/operators/floor_division.html">Bodenschneide-Operator <code>//</code></a> und die <a href="https://python-reference.readthedocs.io/en/latest/docs/operators/modulus.html">Modulo-Operatoren <code>%</code></a>. Der erstere gibt nur den ganzzahligen Teil der Division zurück, also ist <code>4 // 3</code> ist <code>1</code> (weil 4/3 1,33333 ist) und <code>1 // 4</code> ist <code>0</code> (weil 1/4 0,25 ist). Letzterer gibt die verbleibenden Ganzzahlen zurück, also <code>4 % 3</code>ist <code>1</code> und <code>1 % 4</code> ist <code>0</code>. Diese beiden Operatoren reichen aus, um die Zeilen- und Spaltenindizes zu berechnen.</p>
+<p>Aber, höre ich dich sagen, du hast keine Zeilen- und Spaltenindizes, sondern nur den Gesamtindex? Um diese zu berechnen, musst du nur im Kopf behalten, dass jede Zeile <em>vier</em> Karten hat. Dann kannst du zwei spezielle Divisionsoperatoren verwenden: den <a href="https://python-reference.readthedocs.io/en/latest/docs/operators/floor_division.html">Bodenschneide-Operator <code>//</code></a> und die <a href="https://python-reference.readthedocs.io/en/latest/docs/operators/modulus.html">Modulo-Operatoren <code>%</code></a>. Der erstere gibt nur den ganzzahligen Teil der Division zurück, also ist <code>4 // 3</code> ist <code>1</code> (weil 4/3 1,33333 ist) und <code>1 // 4</code> ist <code>0</code> (weil 1/4 0,25 ist). Letzterer gibt die verbleibenden Ganzzahlen zurück, also <code>4 % 3</code>ist <code>1</code> und <code>1 % 4</code> ist <code>1</code>. Diese beiden Operatoren reichen aus, um die Zeilen- und Spaltenindizes zu berechnen.</p>
 <p>Meine Empfehlung wäre erstmal, mit einzelnen Formeln in Jupyter Notebook rumzuspielen. Das macht es einfacher, Dinge auszuprobieren und das Ergebnis zu sehen, verschiedene Werte in Formeln einzugeben usw. Wenn du dir sicher bist, dass der Code funktioniert, verwandle ihn in eine Funktion, dokumentiere ihn und pack ihn in eine separate Datei (<em>utilities.py</em>, vergiss nicht, einen Kommentar oben in der Datei zu hinterlassen!). Dann kannst du ihn in das Hauptskript einbinden und damit die Karte plazieren. Versuche verschiedene Indizes und stell sicher, dass die Karte an der richtigen Stelle erscheint. Und wenn was nicht so läuft wie erwartet, setz einen Breakpoint und gehe Schritt für Schritt durch das Programm, während du die Variablen im Auge behältst.</p>
 <div class="program">
 <p>Füge <strong>position_from_index</strong> in <span class="program-filename">utilities.py</span> ein. Füge aktualisierten Code in <span class="program-filename">code03.py</span> ein.</p>
@@ -586,7 +589,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[5], line 5</span>
 <ul>
 <li>Listen zusammenfügen: <code>&lt;list1&gt; + &lt;list2&gt;</code>.</li>
 </ul>
-<div id="b79be6e3" class="cell" data-execution_count="6">
+<div id="2b2cb4b0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">+</span> b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -598,7 +601,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[5], line 5</span>
 <ul>
 <li>Listen-Vervielfältigung: <code>&lt;list&gt; * &lt;integer-value&gt;</code> erstellt eine <em>neue</em> Liste, indem sie die ursprüngliche Liste <code>&lt;integer-value&gt;</code>-mal kopiert. Zum Beispiel:</li>
 </ul>
-<div id="94c0e4eb" class="cell" data-execution_count="7">
+<div id="5a507963" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">*</span> b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -610,7 +613,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[5], line 5</span>
 </section><section id="enumerate-de" class="level2" data-number="7.16"><h2 data-number="7.16" class="anchored" data-anchor-id="enumerate-de">
 <span class="header-section-number">7.16</span> Schleifen über Index und Element mit Listenummerierung</h2>
 <p>Da wir nun eine Liste von Dateinamen haben, können wir daraus eine Liste von Karten erstellen. Unsere Wörterbuchfunktion benötigt sowohl den Index als auch den Dateinamen. Letzterer ist das <em>Element</em> der Liste, ersterer ist der <em>Index</em> dieses Elements. Du könntest den Index mit der <a href="06-whack-a-mole.de.html#range">range()</a>-Funktion aufbauen, aber Python hat eine bessere Lösung dafür: die <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a>-Funktion! Wenn du statt über eine Liste über <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate(<liste>)</liste></a> iterierst, bekommst du ein Tupel mitboth <code>(index, value)</code>. Hier ist ein Beispiel:</p>
-<div id="9f690f87" class="cell" data-execution_count="8">
+<div id="5d5128f1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>buchstaben <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, buchstabe <span class="kw">in</span> <span class="bu">enumerate</span>(buchstaben):</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'</span><span class="sc">%d</span><span class="st">: </span><span class="sc">%s</span><span class="st">'</span><span class="op">%</span>(index, buchstabe))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -621,7 +624,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[5], line 5</span>
 </div>
 </div>
 <p>Und so kannst du <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a> für List Comprehension verwenden.</p>
-<div id="d40aa763" class="cell" data-execution_count="9">
+<div id="efe7b835" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>buchstaben <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>[<span class="st">"</span><span class="sc">%d</span><span class="st">: </span><span class="sc">%s</span><span class="st">"</span><span class="op">%</span>(index, buchstabe) <span class="cf">for</span> index, buchstabe <span class="kw">in</span> <span class="bu">enumerate</span>(buchstaben)]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
