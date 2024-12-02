@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/07-memory.html" />
-<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/07-memory.de.html" />
+<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/07-memory.html">
+<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/07-memory.de.html">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -142,7 +142,7 @@ window.Quarto = {
         </div>
         </div>
     <div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/07-memory.de.html" id="language-link-de">Deutsch</a></li></ul>
+<button class="btn btn-primary dropdown-toggle language-selector" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/07-memory.de.html" id="language-link-de">Deutsch</a></li></ul>
 </div>
 <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
@@ -337,7 +337,7 @@ window.Quarto = {
 <p>The wise people who created Python were acutely aware of the problem that the <em>variable-as-a-sticker</em> creates. Which is why, they added an <strong>immutable</strong> version of a list, called a <a href="https://docs.python.org/3/library/stdtypes.html?highlight=tuple#tuple">tuple</a>. It is a “frozen” list of values, which you can loop over, access its items by index, or figure out how many items it has, but you <em>cannot modify it</em>. No appending, removing, replacing values, etc. For you this means that a variable with a frozen list is a box rather than a sticker and that it behaves just like any other “normal” <strong>immutable</strong> object. You can create a <code>tuple</code> by using round brackets.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>i_am_a_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can loop over it, e.g.,</p>
-<div id="a2d5ca8c" class="cell" data-execution_count="1">
+<div id="fbf7bc42" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>i_am_a_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> i_am_a_tuple:</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -348,7 +348,7 @@ window.Quarto = {
 </div>
 </div>
 <p>but, as I said, appending will throw a mistake</p>
-<div id="d6095be7" class="cell" data-execution_count="2">
+<div id="2e6357f9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>i_am_a_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># throws AttributeError: 'tuple' object has no attribute 'append'</span></span>
@@ -367,7 +367,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[2], line 4</span>
 </div>
 </div>
 <p>Same goes for trying to change it</p>
-<div id="af381c28" class="cell" data-execution_count="3">
+<div id="a4aeefb4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>i_am_a_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># throws TypeError: 'tuple' object does not support item assignment</span></span>
@@ -404,7 +404,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[3], line 4</span>
 </div>
 <p>Here, <code>y = list(x)</code> created a new list (which was a carbon copy of the one with the “x” sticker on it) and the “y” sticker was put on that new list, while the “x” remained hanging on the original.</p>
 <p>If you feel your head spinning then, unfortunately, I have to tell that it gets even worse. The following paragraph covers fairly advanced scenario but I want you to know about it, as things work extremely counterintuitively and I personally have been caught by this issue a few times and it always took me <em>forever</em> to figure out the problem. Thus, I want you to be at least aware of it. What if you have a tuple (immutable!) that contains a list (mutable) inside? As I told you before, you cannot modify the item itself but that item is merely a reference to list (a sticker on a <em>mutable</em> object!), so even though tuple is immutable, you can still fiddle with the list itself. Moreover, making a copy of a tuple will merely make a copy of a reference that still points to the same list! So, you could be thinking that since it is all tuples everything is immutatable and well-behaving and be caught out by that<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Here is an example of such a mess:</p>
-<div id="18d5fc17" class="cell" data-execution_count="4">
+<div id="1fd89162" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tuple_1 <span class="op">=</span> <span class="bu">tuple</span>([<span class="dv">1</span>, [<span class="st">"A"</span>, <span class="st">"B"</span>], <span class="dv">2</span>])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>tuple_2 <span class="op">=</span> tuple_1</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -575,7 +575,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[4], line 5</span>
 <ul>
 <li>Adding two lists together: <code>&lt;list1&gt; + &lt;list2&gt;</code>.</li>
 </ul>
-<div id="a3ff74b6" class="cell" data-execution_count="5">
+<div id="fbaf0b4b" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">+</span> b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -587,7 +587,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[4], line 5</span>
 <ul>
 <li>List replication:: <code>&lt;list&gt; * &lt;integer-value&gt;</code> creates a <em>new</em> list by replicating the original one <code>&lt;integer-value&gt;</code> times. For example:</li>
 </ul>
-<div id="430a30f3" class="cell" data-execution_count="6">
+<div id="42abeb2b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">*</span> b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -599,7 +599,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[4], line 5</span>
 </section><section id="enumerate" class="level2" data-number="7.16"><h2 data-number="7.16" class="anchored" data-anchor-id="enumerate">
 <span class="header-section-number">7.16</span> Looping over both index and item via list enumeration</h2>
 <p>Now that we have a list of filenames, we can create a list of cards out of it. Our dictionary function requires both index and filename. The latter is the <em>item</em> of the list, the former is the <em>index</em> of that item. You could build the index using <a href="06-whack-a-mole.html#range">range()</a> function but Python has a better solution for this: <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a> function! If, instead of iterating over a list, you iterate over <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate(<list>)</list></a>, you get a tuple with both <code>(index, value)</code>. Here is an example:</p>
-<div id="d32b380c" class="cell" data-execution_count="7">
+<div id="70ecf2b7" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, letter <span class="kw">in</span> <span class="bu">enumerate</span>(letters):</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'</span><span class="sc">%d</span><span class="st">: </span><span class="sc">%s</span><span class="st">'</span><span class="op">%</span>(index, letter))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -610,7 +610,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[4], line 5</span>
 </div>
 </div>
 <p>And here is how you can use <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a> for list comprehension.</p>
-<div id="c34202dd" class="cell" data-execution_count="8">
+<div id="5b9fa4fa" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>[<span class="st">"</span><span class="sc">%d</span><span class="st">: </span><span class="sc">%s</span><span class="st">"</span><span class="op">%</span>(index, letter) <span class="cf">for</span> index, letter <span class="kw">in</span> <span class="bu">enumerate</span>(letters)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">

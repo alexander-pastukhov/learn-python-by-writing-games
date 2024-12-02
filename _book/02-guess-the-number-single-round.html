@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/02-guess-the-number-single-round.html" />
-<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/02-guess-the-number-single-round.de.html" />
+<link rel="alternate" hreflang="en" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/02-guess-the-number-single-round.html">
+<link rel="alternate" hreflang="de" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/02-guess-the-number-single-round.de.html">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
         </div>
     <div class="dropdown" id="languages-links-parent">
-<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/02-guess-the-number-single-round.de.html" id="language-link-de">Deutsch</a></li></ul>
+<button class="btn btn-primary dropdown-toggle language-selector" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i></button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://alexander-pastukhov.github.io/learn-python-by-writing-games/de/02-guess-the-number-single-round.de.html" id="language-link-de">Deutsch</a></li></ul>
 </div>
 <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
@@ -392,14 +392,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Do exercises #3 and #4.</p>
 </div>
 <p>Subtle but important point: conditions are evaluated from left to right until the whole expression is resolved one way or another. This means that if the first expression in a <code>and</code> is <code>False</code>, the second one (the rest of them) is <strong>never evaluated</strong>. I.e., if <code>first and second</code> expressions both need to be <code>True</code> and you know that <code>first</code> expression already is false, the whole expression will be <code>False</code> in any case. This means that in the code below there will be no error, even though evaluating <code>int("e123")</code> alone would raise a <code>ValueError</code>.</p>
-<div id="80ec0dfd" class="cell" data-execution_count="1">
+<div id="557fcfb0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">5</span> <span class="kw">and</span> <span class="bu">int</span>(<span class="st">"e123"</span>) <span class="op">==</span> <span class="dv">123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>False</code></pre>
 </div>
 </div>
 <p>However, reverse the order, so that <code>int("e123") == 123</code> needs to be evaluated first and you get the error message</p>
-<div id="1eb8f3e4" class="cell" data-execution_count="2">
+<div id="ff8152fe" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">"e123"</span>) <span class="op">==</span> <span class="dv">123</span> <span class="kw">and</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -413,14 +413,14 @@ Cell <span class="ansi-green-fg ansi-bold">In[2], line 1</span>
 </div>
 </div>
 <p>Similarly, if <em>any</em> expression in <code>or</code> is <code>True</code>, you do not need to check the rest.</p>
-<div id="a47ae20d" class="cell" data-execution_count="3">
+<div id="88072ad6" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span> <span class="kw">or</span> <span class="bu">int</span>(<span class="st">"e123"</span>) <span class="op">==</span> <span class="dv">123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>However, if the first condition is <code>False</code>, we do need to continue (and stumble into an error):</p>
-<div id="6f07ca5d" class="cell" data-execution_count="4">
+<div id="1fcf8884" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">5</span> <span class="kw">or</span> <span class="bu">int</span>(<span class="st">"e123"</span>) <span class="op">==</span> <span class="dv">123</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
